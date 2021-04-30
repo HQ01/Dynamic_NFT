@@ -8,6 +8,7 @@ require("hardhat-deploy")
 require("./tasks/fund-link")
 require("./tasks/mint-nft")
 require("./tasks/request-new-comment")
+require("./tasks/get-art-at")
 
 
 require('dotenv').config()

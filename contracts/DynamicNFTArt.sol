@@ -24,12 +24,14 @@ contract DynamicNFTArt is ERC721, VRFConsumerBase, Ownable {
         uint256 id;
         string name;
         address author;
+        string uri;
     }
 
     struct ArtExported {
         uint256 id;
         string name;
         address author;
+        string uri;
         address[] Commentators;
         uint256[] Comments;
         address[] Critics;
@@ -69,6 +71,7 @@ contract DynamicNFTArt is ERC721, VRFConsumerBase, Ownable {
         ArtWork memory art;
         art.id = id;
         art.name = name;
+        art.uri = tokenURI;
         art.author = recipient;
         works.push(art);
         _safeMint(recipient, id);
@@ -136,6 +139,7 @@ contract DynamicNFTArt is ERC721, VRFConsumerBase, Ownable {
             works[id-1].id,
             works[id-1].name,
             works[id-1].author,
+            works[id-1].uri,
             idToCommentators[id-1],
             idToComments[id-1],
             idToCritics[id-1],

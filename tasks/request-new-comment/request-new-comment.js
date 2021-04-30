@@ -1,4 +1,4 @@
-task("request-new-comment", "request a new comment for a DNA token")
+task("request-new-comment", "request a new comment and a new critique for a DNA token")
     .addParam("contract", "The address of the DNA contract")
     .addParam("id", "The token id number")
     .setAction(async taskArgs => {
