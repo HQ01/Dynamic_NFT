@@ -1,0 +1,1 @@
+exports.mintNFT = require("./mint-nft.js")

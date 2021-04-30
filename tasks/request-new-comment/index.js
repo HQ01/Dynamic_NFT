@@ -1,0 +1,1 @@
+exports.mintNFT = require("./request-new-comment.js")
